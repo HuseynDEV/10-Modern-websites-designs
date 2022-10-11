@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background-image: url('./Sound webpage_img/image.png');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position:center ;
+}
+
+
+.container_wrapper{
+    padding: 15px 3rem;
+}
+
+.container .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.header .logo img{
+    width: 140px;
+}
+
+.header .menu{
+    display: flex;
+    align-items: center;
+    gap:2rem
+}
+
+
+.right{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: -1;
+}
+
+.left h1{
+    position: absolute;
+    top:50%;
+    left:4rem;
+    transform: translateY( -50%);
+    font-size: 80px;
+    color:white;
+    max-width: 150px;
+}
+
+
+.right{
+  position: absolute;
+  top: 50%;
+  right:3rem;
+  transform: translateY(-50%);
+  width: 50%;
+  z-index: 999;
+}
+
+
+.right .info{
+    position: absolute;
+    top:50%;
+    right:4rem;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.right .info img{
+    width: 60px;
+    margin-left: 20px;
+}
+

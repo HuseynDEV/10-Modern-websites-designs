@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./Radiance_img/logo.png" alt="">
+            </div>
+            <div class="right">
+                <div class="btn">Explore</div>
+                <img src="./Radiance_img/user.png" alt="">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="info">
+                <h1>DISCOVER</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint repellat quisquam quis, omnis fuga
+                    deleniti et sapiente dolor! Assumenda, ut?</p>
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="slider">
+            <img src="./Radiance_img/left-arrow.png" class="arrow left_arrow" alt="">
+            <div class="slide">
+                <img src="./Radiance_img/small1.png" class="thumbail active" alt="">
+                <img src="./Radiance_img/small2.png" class="thumbail" alt="">
+                <img src="./Radiance_img/small3.png" class="thumbail" alt="">
+                <img src="./Radiance_img/small4.png" class="thumbail" alt="">
+                <img src="./Radiance_img/small5.png" class="thumbail" alt="">
+            </div>
+            <img src="./Radiance_img/right-arrow.png" class="arrow right_arrow" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        let cont = document.querySelector('.container')
+        let left_arrow = document.querySelector('.left_arrow')
+        let right_arrow = document.querySelector('.right_arrow')
+        let thumbal = document.querySelectorAll('.thumbail')
+
+        let image = new Array(
+            './Radiance_img/bg1.png',
+            './Radiance_img/bg2.png',
+            './Radiance_img/bg3.png',
+            './Radiance_img/bg4.png',
+            './Radiance_img/bg5.png'
+        )
+
+        let i = 0;
+        right_arrow.addEventListener('click', () => {
+
+            thumbal.forEach(i=>{
+                i.classList.remove('active')
+            })
+
+            if (i < 4) {
+                i++
+                console.log(i)
+                cont.style.backgroundImage = 'url("' + image[i] + '")'
+           
+                thumbal[i].classList.add('active')
+            }
+            else  {
+                i = 0
+                cont.style.backgroundImage = 'url("' + image[i] + '")'
+
+                thumbal[i].classList.add('active')
+            }
+
+        })
+        left_arrow.addEventListener('click', () => {
+            thumbal.forEach(i=>{
+                i.classList.remove('active')
+            })
+
+            if (i > 0) {
+                i--
+                console.log(i)
+                cont.style.backgroundImage = 'url("' + image[i] + '")'
+                thumbal[i].classList.add('active')
+            }
+            else {
+                i = 4
+                cont.style.backgroundImage = 'url("' + image[i] + '")'
+
+                thumbal[i].classList.add('active')
+            }
+
+        })
+
+    </script>
+
+</body>
+
+</html>

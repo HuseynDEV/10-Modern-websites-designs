@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 30px 5% 0;
+    z-index: 100;
+}
+
+
+
+.logo {
+    width: 140px;
+    cursor: pointer;
+}
+
+.menu {
+    width: 30px;
+    cursor: pointer;
+}
+
+
+nav ul {
+    flex: 1;
+    text-align: right;
+    margin-right: 150px;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin: 0 42px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+
+
+.left-col {
+    flex-basis: 62%;
+    padding: 10% 5% 0;
+}
+
+
+.right-col {
+    flex-basis: 38%;
+    padding: 10% 3% 0;
+    background: rgba(71, 0, 204, 0.6);
+    position: relative;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -10;
+}
+
+
+.left-col h1{
+    color:#444;
+    font-size: 45px;
+    padding-left: 60px;
+    position: relative;
+}
+
+.left-col h1:before{
+    content: '';
+    background: #0011db;
+    height: 80%;
+    width: 8px;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left:10px;
+    transform: translateY(-50%);
+}
+
+.right-col h3{
+    position: absolute;
+    color:#fff;
+    padding-left: 50px;
+    bottom: 120px;
+}
+
+.play-icon{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+}
+
+
+.team{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 80px;
+
+}
+
+.user-col{
+    flex-basis: 27%;
+    text-align: center;
+    position: relative;
+    transition: .7s all;
+}
+
+.user-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info{
+    opacity: 0;
+}
+
+.user-col .info{
+    transition: .7s all;
+}
+
+.user-col:hover{
+    transform: translateY(-60px);
+}
+
+.user-col:hover .info{
+    opacity: 1;
+}
+
+ .user-col .arrow-icon{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    /* background: red; */
+}
+
+
+/* .container {
+    width: 100%;
+    height: 100vh;
+}
+
+.container_wrapper {
+    max-width: 1400px;
+    margin: auto;
+    height: 100%;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.container_wrapper .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 1400px;
+    padding: 1rem 0;
+    z-index: 999;
+    background: rgb(rgb(21, 175, 202), rgb(16, 101, 154), rgb(68, 10, 156));
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+}
+
+.header_right .menu {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin-right: 180px;
+}
+
+.bar img {
+    width: 40px;
+}
+
+.menu li a {
+    color: black
+}
+
+
+
+.head h1 {
+    color: #444345;
+    font-size: 40px;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.head h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: #0011DB;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.main_menu .left {
+    margin-top: 150px;
+}
+
+.main_menu {
+    display: flex;
+}
+
+.main_menu .left {
+    flex-basis: 60%;
+}
+
+.main_menu .right {
+    flex-basis: 40%;
+    height: 100vh;
+    background: rgba(71, 0, 204, 0.6);
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 20px;
+    margin-top: 90px;
+}
+
+.images .img {
+    position: relative;
+    transition: .5s all;
+}
+
+.images .img .main_img {
+    width: 200px;
+    height: 320px;
+    border-radius: 20px;
+}
+
+.arrow_img {
+    position: absolute;
+    width: 45px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.images .img .main_img img {
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.images .img:hover {
+    transform: translateY(-20px);
+}
+
+.right .video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -10;
+}
+
+.right .video source {
+    width: 100%;
+}
+
+.right {
+    position: relative;
+    transform: translateX(59px);
+    z-index: 999;
+}
+
+.right video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    right:0;
+    bottom: 0;
+    z-index: -100;
+
+}
+
+.over {
+    position: absolute;
+    bottom: 30%;
+    left:40px
+}
+
+.over h2{
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+    width: 500px;
+    font-size: 20px;
+    color:white
+}
+
+.over h2:before{
+    content: '';
+    width: 5px;
+    height: 100%;
+    background: #0011DB;
+    position: absolute;
+    left:0
+
+} */
